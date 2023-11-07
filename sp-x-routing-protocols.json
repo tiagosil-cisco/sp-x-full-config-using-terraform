@@ -1,0 +1,44 @@
+{
+    "ospf": {
+        "enable_ospf" : true,
+        "processes": {
+            "common": {
+                "auto_cost_reference": "1000000",
+                "sr_mpls" : true,
+                "sr_mpls_prefer" : true,
+                "area": "0"
+            },
+            "1": {
+                "auto_cost_reference": "1000000",
+                "sr_mpls" : true,
+                "sr_mpls_prefer" : true,
+                "area": "0"
+            }
+    
+        }
+    },
+    "isis": {
+        "enable_isis" : true,
+        "processes": {
+            "CORE": {
+                "is_type" : "level-2-only",
+                "address_families": {
+                    "ipv4_unicast": {
+                        "af_name": "ipv4",
+                        "saf_name": "unicast",
+                        "metric_style_wide": true,
+                        "level_id": "2"
+                    },
+                    "ipv6_unicast": {
+                        "af_name": "ipv6",
+                        "saf_name": "unicast",
+                        "metric_style_wide": true,
+                        "level_id": "2"
+                    }
+                }
+            }
+        }
+    }
+    
+}
+

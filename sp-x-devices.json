@@ -1,0 +1,114 @@
+{
+    "routers": [
+        {
+            "name": "A-NCS5-PE01",
+            "host": "10.0.255.171:57344",
+            "oob_mgmt_interface": "MgmtEth0/RP0/CPU0/0",
+            "inb_mgmt_interface": "Loopback0",
+            "router_level": "pe",
+            "ospf_sr_mpls" : true,
+            "ospf_sr_mpls_prefer" : true,
+            "isis_net": "49.0001.0010.0031.0001.0001.00"
+        },
+        {
+            "name": "A-NCS5-PE02",
+            "host": "10.0.255.172:57344",
+            "oob_mgmt_interface": "MgmtEth0/RP0/CPU0/0",
+            "inb_mgmt_interface": "Loopback0",
+            "router_level": "pe",
+            "ospf_sr_mpls" : true,
+            "ospf_sr_mpls_prefer" : true,
+            "isis_net": "49.0001.0010.0031.0001.0002.00"
+        },
+        {
+            "name": "A-NCS5-P01",
+            "host": "10.0.255.173:57344",
+            "oob_mgmt_interface": "MgmtEth0/RP0/CPU0/0",
+            "inb_mgmt_interface": "Loopback0",
+            "router_level": "p",
+            "ospf_sr_mpls" : true,
+            "ospf_sr_mpls_prefer" : true,
+            "isis_net": "49.0001.0010.0031.0001.0003.00"
+        },
+        {
+            "name": "A-NCS5-P02",
+            "host": "10.0.255.174:57344",
+            "oob_mgmt_interface": "MgmtEth0/RP0/CPU0/0",
+            "inb_mgmt_interface": "Loopback0",
+            "router_level": "p",
+            "ospf_sr_mpls" : true,
+            "ospf_sr_mpls_prefer" : true,
+            "isis_net": "49.0001.0010.0031.0001.0004.00"
+        },
+        {
+            "name": "A-NCS5-P03",
+            "host": "10.0.255.175:57344",
+            "oob_mgmt_interface": "MgmtEth0/RP0/CPU0/0",
+            "inb_mgmt_interface": "Loopback0",
+            "router_level": "p",
+            "ospf_sr_mpls" : true,
+            "ospf_sr_mpls_prefer" : true,
+            "isis_net": "49.0001.0010.0031.0001.0005.00"
+        },
+        {
+            "name": "A-NCS5-P04",
+            "host": "10.0.255.176:57344",
+            "oob_mgmt_interface": "MgmtEth0/RP0/CPU0/0",
+            "inb_mgmt_interface": "Loopback0",
+            "router_level": "p",
+            "ospf_sr_mpls" : true,
+            "ospf_sr_mpls_prefer" : true,
+            "isis_net": "49.0001.0010.0031.0001.0006.00"
+        },
+        {
+            "name": "A-NCS5-PE03",
+            "host": "10.0.255.177:57344",
+            "oob_mgmt_interface": "MgmtEth0/RP0/CPU0/0",
+            "inb_mgmt_interface": "Loopback0",
+            "router_level": "pe",
+            "ospf_sr_mpls" : true,
+            "ospf_sr_mpls_prefer" : true,
+            "isis_net": "49.0001.0010.0031.0001.0007.00"
+        },
+        {
+            "name": "A-NCS5-PE04",
+            "host": "10.0.255.178:57344",
+            "oob_mgmt_interface": "MgmtEth0/RP0/CPU0/0",
+            "inb_mgmt_interface": "Loopback0",
+            "router_level": "pe",
+            "ospf_sr_mpls" : true,
+            "ospf_sr_mpls_prefer" : true,
+            "isis_net": "49.0001.0010.0031.0001.0008.00"
+        },
+        {
+            "name": "A-NCS5-ASBR01",
+            "host": "10.0.255.179:57344",
+            "oob_mgmt_interface": "MgmtEth0/RP0/CPU0/0",
+            "inb_mgmt_interface": "Loopback0",
+            "router_level": "asbr",
+            "ospf_sr_mpls" : true,
+            "ospf_sr_mpls_prefer" : true,
+            "isis_net": "49.0001.0010.0031.0001.0009.00"
+        },
+        {
+            "name": "A-NCS5-ASBR02",
+            "host": "10.0.255.180:57344",
+            "oob_mgmt_interface": "MgmtEth0/RP0/CPU0/0",
+            "inb_mgmt_interface": "Loopback0",
+            "router_level": "asbr",
+            "ospf_sr_mpls" : true,
+            "ospf_sr_mpls_prefer" : true,
+            "isis_net": "49.0001.0010.0031.0001.0010.00"
+        },
+        {
+            "name": "A-XRv9-RRPCE01",
+            "host": "10.0.20.102:57344",
+            "oob_mgmt_interface": "MgmtEth0/RP0/CPU0/0",
+            "inb_mgmt_interface": "Loopback0",
+            "router_level": "rrpce",
+            "ospf_sr_mpls" : true,
+            "ospf_sr_mpls_prefer" : true,
+            "isis_net": "49.0001.0010.0031.0001.0011.00"
+        }
+    ]
+}
