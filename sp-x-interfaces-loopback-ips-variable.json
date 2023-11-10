@@ -12,7 +12,10 @@
     "isis_circuit_type": "level-2-only",
     "isis_ipv4_metric": "200",
     "isis_ipv6_metric": "400",
-    "sr_prefix_sid_index": 1
+    "sr_enabled": true,
+    "sr_prefex": true,
+    "sr_ipv4_prefix_sid_index": 1,
+    "sr_ipv6_prefix_sid_index": 1001
   },
   "A-NCS5-PE02": {
     "loopback_id": 0,
@@ -26,7 +29,11 @@
     "isis_process": "CORE",
     "isis_circuit_type": "level-2-only",
     "isis_ipv4_metric": "200",
-    "isis_ipv6_metric": "400"
+    "isis_ipv6_metric": "400",
+    "sr_enabled": true,
+    "sr_prefex": true,
+    "sr_ipv4_prefix_sid_index": 2,
+    "sr_ipv6_prefix_sid_index": 1002
   },
   "A-NCS5-P01": {
     "loopback_id": 0,
@@ -40,7 +47,11 @@
     "isis_process": "CORE",
     "isis_circuit_type": "level-2-only",
     "isis_ipv4_metric": "200",
-    "isis_ipv6_metric": "400"
+    "isis_ipv6_metric": "400",
+    "sr_enabled": true,
+    "sr_prefex": true,
+    "sr_ipv4_prefix_sid_index": 3,
+    "sr_ipv6_prefix_sid_index": 1003
   },
   "A-NCS5-P02": {
     "loopback_id": 0,
@@ -54,7 +65,11 @@
     "isis_process": "CORE",
     "isis_circuit_type": "level-2-only",
     "isis_ipv4_metric": "200",
-    "isis_ipv6_metric": "400"
+    "isis_ipv6_metric": "400",
+    "sr_enabled": true,
+    "sr_prefex": true,
+    "sr_ipv4_prefix_sid_index": 4,
+    "sr_ipv6_prefix_sid_index": 1004
   },
   "A-NCS5-P03": {
     "loopback_id": 0,
@@ -68,7 +83,11 @@
     "isis_process": "CORE",
     "isis_circuit_type": "level-2-only",
     "isis_ipv4_metric": "200",
-    "isis_ipv6_metric": "400"
+    "isis_ipv6_metric": "400",
+    "sr_enabled": true,
+    "sr_prefex": true,
+    "sr_ipv4_prefix_sid_index": 5,
+    "sr_ipv6_prefix_sid_index": 1005
   },
   "A-NCS5-P04": {
     "loopback_id": 0,
@@ -82,7 +101,11 @@
     "isis_process": "CORE",
     "isis_circuit_type": "level-2-only",
     "isis_ipv4_metric": "200",
-    "isis_ipv6_metric": "400"
+    "isis_ipv6_metric": "400",
+    "sr_enabled": true,
+    "sr_prefex": true,
+    "sr_ipv4_prefix_sid_index": 6,
+    "sr_ipv6_prefix_sid_index": 1006
   },
   "A-NCS5-PE03": {
     "loopback_id": 0,
@@ -96,7 +119,11 @@
     "isis_process": "CORE",
     "isis_circuit_type": "level-2-only",
     "isis_ipv4_metric": "200",
-    "isis_ipv6_metric": "400"
+    "isis_ipv6_metric": "400",
+    "sr_enabled": true,
+    "sr_prefex": true,
+    "sr_ipv4_prefix_sid_index": 7,
+    "sr_ipv6_prefix_sid_index": 1007
   },
   "A-NCS5-PE04": {
     "loopback_id": 0,
@@ -110,7 +137,11 @@
     "isis_process": "CORE",
     "isis_circuit_type": "level-2-only",
     "isis_ipv4_metric": "200",
-    "isis_ipv6_metric": "400"
+    "isis_ipv6_metric": "400",
+    "sr_enabled": true,
+    "sr_prefex": true,
+    "sr_ipv4_prefix_sid_index": 8,
+    "sr_ipv6_prefix_sid_index": 1008
   },
   "A-NCS5-ASBR01": {
     "loopback_id": 0,
@@ -124,7 +155,11 @@
     "isis_process": "CORE",
     "isis_circuit_type": "level-2-only",
     "isis_ipv4_metric": "200",
-    "isis_ipv6_metric": "400"
+    "isis_ipv6_metric": "400",
+    "sr_enabled": true,
+    "sr_prefex": true,
+    "sr_ipv4_prefix_sid_index": 9,
+    "sr_ipv6_prefix_sid_index": 1009
   },
   "A-NCS5-ASBR02": {
     "loopback_id": 0,
@@ -138,7 +173,11 @@
     "isis_process": "CORE",
     "isis_circuit_type": "level-2-only",
     "isis_ipv4_metric": "200",
-    "isis_ipv6_metric": "400"
+    "isis_ipv6_metric": "400",
+    "sr_enabled": true,
+    "sr_prefex": true,
+    "sr_ipv4_prefix_sid_index": 10,
+    "sr_ipv6_prefix_sid_index": 1010
   },
   "A-XRv9-RRPCE01": {
     "loopback_id": 0,
@@ -152,6 +191,10 @@
     "isis_process": "CORE",
     "isis_circuit_type": "level-2-only",
     "isis_ipv4_metric": "200",
-    "isis_ipv6_metric": "400"
+    "isis_ipv6_metric": "400",
+    "sr_enabled": true,
+    "sr_prefex": true,
+    "sr_ipv4_prefix_sid_index": 11,
+    "sr_ipv6_prefix_sid_index": 1011
   }
 }

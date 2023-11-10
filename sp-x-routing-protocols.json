@@ -1,6 +1,6 @@
 {
     "ospf": {
-        "enable_ospf" : true,
+        "enable_ospf" : false,
         "processes": {
             "common": {
                 "auto_cost_reference": "1000000",

@@ -12,12 +12,13 @@ locals {
 
 
 }
-
+/*
 variable "routing_protocols" {
   description = "A map of routing protocols and their enabled state"
   type        = map(any)
   default = {
     isis = true
-    ospf = true
+    ospf = false
   }
 }
+*/

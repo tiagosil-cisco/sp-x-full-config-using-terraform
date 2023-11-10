@@ -23,7 +23,7 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-"isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400
   },
   "2": {
     "description": "PE01_to_P01",
@@ -49,7 +49,7 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-"isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400
   },
   "3": {
     "description": "PE01_to_P02",
@@ -75,7 +75,7 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-"isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400
   },
   "4": {
     "description": "PE02_to_P01",
@@ -101,7 +101,7 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-"isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400
   },
   "5": {
     "description": "PE02_to_P02",
@@ -127,7 +127,7 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-"isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400
   },
   "6": {
     "description": "P01_to_P02",
@@ -153,7 +153,7 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-"isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400
   },
   "7": {
     "description": "P01_to_P03",
@@ -179,7 +179,7 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-"isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400
   },
   "8": {
     "description": "P01_to_P04",
@@ -205,7 +205,7 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-"isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400
   },
   "9": {
     "description": "P01_to_RRPCE01",
@@ -231,7 +231,7 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-"isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400
   },
   "10": {
     "description": "P02_to_P03",
@@ -257,7 +257,7 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-"isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400
   },
   "11": {
     "description": "P02_to_P04",
@@ -283,7 +283,7 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-"isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400
   },
   "12": {
     "description": "P02_to_ASBR01",
@@ -309,7 +309,7 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-"isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400
   },
   "13": {
     "description": "P02_to_ASBR02",
@@ -335,7 +335,7 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-"isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400
   },
   "14": {
     "description": "P03_to_P04",
@@ -361,7 +361,7 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-"isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400
   },
   "15": {
     "description": "P03_to_PE03",
@@ -387,7 +387,7 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-"isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400
   },
   "16": {
     "description": "P03_to_PE04",
@@ -413,7 +413,7 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-"isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400
   },
   "17": {
     "description": "P04_to_PE03",
@@ -439,7 +439,7 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-"isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400
   },
   "18": {
     "description": "P04_to_PE04",
@@ -465,7 +465,7 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-"isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400
   },
   "19": {
     "description": "P04_to_ASBR01",
@@ -491,7 +491,7 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-"isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400
   },
   "20": {
     "description": "P04_to_ASBR02",
@@ -517,7 +517,7 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-"isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400
   },
   "21": {
     "description": "ASBR01_to_ASBR02",
@@ -543,7 +543,7 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-"isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400
   },
   "22": {
     "description": "PE03_to_PE04",
@@ -569,7 +569,7 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-"isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400
   },
   "23": {
     "description": "P01_to_RRPCE01",
@@ -595,6 +595,6 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-"isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400
   }
 }
