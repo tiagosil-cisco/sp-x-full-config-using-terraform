@@ -1,8 +1,8 @@
 {
   "1": {
     "description": "PE01_to_PE02",
-    "mtu_a": 9126,
-    "mtu_b": 9126,
+    "mtu_a": 9100,
+    "mtu_b": 9100,
     "subnet_ipv4": "10.30.0.0/30",
     "subnet_ipv6": "fc00:10:30:0:0::0/64",
     "router_a": "A-NCS5-PE01",
@@ -23,12 +23,15 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-    "isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400,
+    "igp_metric_ipv4": 100,
+    "igp_metric_ipv6": 100,
+    "te_metric": 100
   },
   "2": {
     "description": "PE01_to_P01",
-    "mtu_a": 9126,
-    "mtu_b": 9126,
+    "mtu_a": 9100,
+    "mtu_b": 9100,
     "subnet_ipv4": "10.30.0.4/30",
     "subnet_ipv6": "fc00:10:30:0:4::0/64",
     "router_a": "A-NCS5-PE01",
@@ -49,12 +52,15 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-    "isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400,
+    "igp_metric_ipv4": 100,
+    "igp_metric_ipv6": 100,
+    "te_metric": 100
   },
   "3": {
     "description": "PE01_to_P02",
-    "mtu_a": 9126,
-    "mtu_b": 9126,
+    "mtu_a": 9100,
+    "mtu_b": 9100,
     "subnet_ipv4": "10.30.0.8/30",
     "subnet_ipv6": "fc00:10:30:0:8::0/64",
     "router_a": "A-NCS5-PE01",
@@ -75,12 +81,15 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-    "isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400,
+    "igp_metric_ipv4": 100,
+    "igp_metric_ipv6": 100,
+    "te_metric": 100
   },
   "4": {
     "description": "PE02_to_P01",
-    "mtu_a": 9126,
-    "mtu_b": 9126,
+    "mtu_a": 9100,
+    "mtu_b": 9100,
     "subnet_ipv4": "10.30.0.12/30",
     "subnet_ipv6": "fc00:10:30:0:12::0/64",
     "router_a": "A-NCS5-PE02",
@@ -101,12 +110,15 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-    "isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400,
+    "igp_metric_ipv4": 100,
+    "igp_metric_ipv6": 100,
+    "te_metric": 100
   },
   "5": {
     "description": "PE02_to_P02",
-    "mtu_a": 9126,
-    "mtu_b": 9126,
+    "mtu_a": 9100,
+    "mtu_b": 9100,
     "subnet_ipv4": "10.30.0.16/30",
     "subnet_ipv6": "fc00:10:30:0:16::0/64",
     "router_a": "A-NCS5-PE02",
@@ -127,12 +139,15 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-    "isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400,
+    "igp_metric_ipv4": 100,
+    "igp_metric_ipv6": 100,
+    "te_metric": 100
   },
   "6": {
     "description": "P01_to_P02",
-    "mtu_a": 9126,
-    "mtu_b": 9126,
+    "mtu_a": 9100,
+    "mtu_b": 9100,
     "subnet_ipv4": "10.30.0.20/30",
     "subnet_ipv6": "fc00:10:30:0:20::0/64",
     "router_a": "A-NCS5-P01",
@@ -153,12 +168,15 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-    "isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400,
+    "igp_metric_ipv4": 100,
+    "igp_metric_ipv6": 100,
+    "te_metric": 100
   },
   "7": {
     "description": "P01_to_P03",
-    "mtu_a": 9126,
-    "mtu_b": 9126,
+    "mtu_a": 9100,
+    "mtu_b": 9100,
     "subnet_ipv4": "10.30.0.24/30",
     "subnet_ipv6": "fc00:10:30:0:24::0/64",
     "router_a": "A-NCS5-P01",
@@ -179,12 +197,15 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-    "isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400,
+    "igp_metric_ipv4": 10,
+    "igp_metric_ipv6": 10,
+    "te_metric": 100
   },
   "8": {
     "description": "P01_to_P04",
-    "mtu_a": 9126,
-    "mtu_b": 9126,
+    "mtu_a": 9100,
+    "mtu_b": 9100,
     "subnet_ipv4": "10.30.0.28/30",
     "subnet_ipv6": "fc00:10:30:0:28::0/64",
     "router_a": "A-NCS5-P01",
@@ -205,7 +226,10 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-    "isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400,
+    "igp_metric_ipv4": 100,
+    "igp_metric_ipv6": 100,
+    "te_metric": 100
   },
   "9": {
     "description": "P01_to_RRPCE01",
@@ -231,12 +255,15 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-    "isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400,
+    "igp_metric_ipv4": 100,
+    "igp_metric_ipv6": 100,
+    "te_metric": 100
   },
   "10": {
     "description": "P02_to_P03",
-    "mtu_a": 9126,
-    "mtu_b": 9126,
+    "mtu_a": 9100,
+    "mtu_b": 9100,
     "subnet_ipv4": "10.30.0.36/30",
     "subnet_ipv6": "fc00:10:30:0:36::0/64",
     "router_a": "A-NCS5-P02",
@@ -257,12 +284,15 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-    "isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400,
+    "igp_metric_ipv4": 100,
+    "igp_metric_ipv6": 100,
+    "te_metric": 100
   },
   "11": {
     "description": "P02_to_P04",
-    "mtu_a": 9126,
-    "mtu_b": 9126,
+    "mtu_a": 9100,
+    "mtu_b": 9100,
     "subnet_ipv4": "10.30.0.40/30",
     "subnet_ipv6": "fc00:10:30:0:40::0/64",
     "router_a": "A-NCS5-P02",
@@ -283,12 +313,15 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-    "isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400,
+    "igp_metric_ipv4": 25,
+    "igp_metric_ipv6": 25,
+    "te_metric": 100
   },
   "12": {
     "description": "P02_to_ASBR01",
-    "mtu_a": 9126,
-    "mtu_b": 9126,
+    "mtu_a": 9100,
+    "mtu_b": 9100,
     "subnet_ipv4": "10.30.0.44/30",
     "subnet_ipv6": "fc00:10:30:0:44::0/64",
     "router_a": "A-NCS5-P02",
@@ -309,12 +342,15 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-    "isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400,
+    "igp_metric_ipv4": 100,
+    "igp_metric_ipv6": 100,
+    "te_metric": 100
   },
   "13": {
     "description": "P02_to_ASBR02",
-    "mtu_a": 9126,
-    "mtu_b": 9126,
+    "mtu_a": 9100,
+    "mtu_b": 9100,
     "subnet_ipv4": "10.30.0.48/30",
     "subnet_ipv6": "fc00:10:30:0:48::0/64",
     "router_a": "A-NCS5-P02",
@@ -335,12 +371,15 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-    "isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400,
+    "igp_metric_ipv4": 100,
+    "igp_metric_ipv6": 100,
+    "te_metric": 100
   },
   "14": {
     "description": "P03_to_P04",
-    "mtu_a": 9126,
-    "mtu_b": 9126,
+    "mtu_a": 9100,
+    "mtu_b": 9100,
     "subnet_ipv4": "10.30.0.52/30",
     "subnet_ipv6": "fc00:10:30:0:52::0/64",
     "router_a": "A-NCS5-P03",
@@ -361,12 +400,15 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-    "isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400,
+    "igp_metric_ipv4": 100,
+    "igp_metric_ipv6": 100,
+    "te_metric": 100
   },
   "15": {
     "description": "P03_to_PE03",
-    "mtu_a": 9126,
-    "mtu_b": 9126,
+    "mtu_a": 9100,
+    "mtu_b": 9100,
     "subnet_ipv4": "10.30.0.56/30",
     "subnet_ipv6": "fc00:10:30:0:56::0/64",
     "router_a": "A-NCS5-P03",
@@ -387,12 +429,15 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-    "isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400,
+    "igp_metric_ipv4": 10,
+    "igp_metric_ipv6": 10,
+    "te_metric": 100
   },
   "16": {
     "description": "P03_to_PE04",
-    "mtu_a": 9126,
-    "mtu_b": 9126,
+    "mtu_a": 9100,
+    "mtu_b": 9100,
     "subnet_ipv4": "10.30.0.60/30",
     "subnet_ipv6": "fc00:10:30:0:60::0/64",
     "router_a": "A-NCS5-P03",
@@ -413,12 +458,15 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-    "isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400,
+    "igp_metric_ipv4": 100,
+    "igp_metric_ipv6": 100,
+    "te_metric": 100
   },
   "17": {
     "description": "P04_to_PE03",
-    "mtu_a": 9126,
-    "mtu_b": 9126,
+    "mtu_a": 9100,
+    "mtu_b": 9100,
     "subnet_ipv4": "10.30.0.64/30",
     "subnet_ipv6": "fc00:10:30:0:64::0/64",
     "router_a": "A-NCS5-P04",
@@ -439,12 +487,15 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-    "isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400,
+    "igp_metric_ipv4": 100,
+    "igp_metric_ipv6": 100,
+    "te_metric": 100
   },
   "18": {
     "description": "P04_to_PE04",
-    "mtu_a": 9126,
-    "mtu_b": 9126,
+    "mtu_a": 9100,
+    "mtu_b": 9100,
     "subnet_ipv4": "10.30.0.72/30",
     "subnet_ipv6": "fc00:10:30:0:72::0/64",
     "router_a": "A-NCS5-P04",
@@ -465,12 +516,15 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-    "isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400,
+    "igp_metric_ipv4": 100,
+    "igp_metric_ipv6": 100,
+    "te_metric": 100
   },
   "19": {
     "description": "P04_to_ASBR01",
-    "mtu_a": 9126,
-    "mtu_b": 9126,
+    "mtu_a": 9100,
+    "mtu_b": 9100,
     "subnet_ipv4": "10.30.0.80/30",
     "subnet_ipv6": "fc00:10:30:0:80::0/64",
     "router_a": "A-NCS5-P04",
@@ -491,12 +545,15 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-    "isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400,
+    "igp_metric_ipv4": 100,
+    "igp_metric_ipv6": 100,
+    "te_metric": 100
   },
   "20": {
     "description": "P04_to_ASBR02",
-    "mtu_a": 9126,
-    "mtu_b": 9126,
+    "mtu_a": 9100,
+    "mtu_b": 9100,
     "subnet_ipv4": "10.30.0.88/30",
     "subnet_ipv6": "fc00:10:30:0:88::0/64",
     "router_a": "A-NCS5-P04",
@@ -517,12 +574,15 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-    "isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400,
+    "igp_metric_ipv4": 100,
+    "igp_metric_ipv6": 100,
+    "te_metric": 100
   },
   "21": {
     "description": "ASBR01_to_ASBR02",
-    "mtu_a": 9126,
-    "mtu_b": 9126,
+    "mtu_a": 9100,
+    "mtu_b": 9100,
     "subnet_ipv4": "10.30.0.96/30",
     "subnet_ipv6": "fc00:10:30:0:96::0/64",
     "router_a": "A-NCS5-ASBR01",
@@ -543,12 +603,15 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-    "isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400,
+    "igp_metric_ipv4": 100,
+    "igp_metric_ipv6": 100,
+    "te_metric": 100
   },
   "22": {
     "description": "PE03_to_PE04",
-    "mtu_a": 9126,
-    "mtu_b": 9126,
+    "mtu_a": 9100,
+    "mtu_b": 9100,
     "subnet_ipv4": "10.30.0.104/30",
     "subnet_ipv6": "fc00:10:30:0:104::0/64",
     "router_a": "A-NCS5-PE03",
@@ -569,7 +632,10 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-    "isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400,
+    "igp_metric_ipv4": 100,
+    "igp_metric_ipv6": 100,
+    "te_metric": 100
   },
   "23": {
     "description": "P01_to_RRPCE01",
@@ -595,6 +661,9 @@
     "isis_hello_padding_disable": true,
     "isis_ti_lfa": true,
     "isis_ipv4_metric": 200,
-    "isis_ipv6_metric": 400
+    "isis_ipv6_metric": 400,
+    "igp_metric_ipv4": 100,
+    "igp_metric_ipv6": 100,
+    "te_metric": 100
   }
 }

@@ -4,10 +4,11 @@ resource "iosxr_router_ospf" "ospf_process" {
   process_name                  = local.ospf_process_id
   router_id                     = local.loopback_ips[each.value.name].ipv4_address
   auto_cost_reference_bandwidth = local.routing_protocols.ospf.processes.common.auto_cost_reference
-
   areas = [
     {
       area_id = "0"
     }
   ]
+
+
 }

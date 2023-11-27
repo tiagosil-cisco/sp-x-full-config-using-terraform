@@ -8,5 +8,6 @@ locals {
   routing_protocols = jsondecode(file("${path.root}/sp-x-routing-protocols.json"))
 
   isis_process_id = "CORE"
+  ospf_process_id = "1"
 }
 

@@ -9,6 +9,7 @@ resource "iosxr_interface" "links_side_a" {
   mtu            = each.value.mtu_a
   bandwidth      = each.value.bandwidth
   description    = each.value.description
+  /*
   ipv4_address   = cidrhost(each.value.subnet_ipv4, 1)
   ipv4_netmask   = cidrnetmask(each.value.subnet_ipv4)
   ipv6_enable    = true
@@ -18,6 +19,7 @@ resource "iosxr_interface" "links_side_a" {
       prefix_length = 64
     }
   ]
+  */
 }
 
 
@@ -45,6 +47,7 @@ resource "iosxr_interface" "links_side_a_sub" {
   mtu                         = each.value.mtu_a
   bandwidth                   = each.value.bandwidth
   description                 = each.value.description
+  /*
   ipv4_address                = cidrhost(each.value.subnet_ipv4, 1)
   ipv4_netmask                = cidrnetmask(each.value.subnet_ipv4)
   ipv6_enable                 = true
@@ -54,6 +57,7 @@ resource "iosxr_interface" "links_side_a_sub" {
       prefix_length = 64
     }
   ]
+  */
 }
 
 
@@ -67,6 +71,7 @@ resource "iosxr_interface" "links_side_b" {
   mtu            = each.value.mtu_b
   bandwidth      = each.value.bandwidth
   description    = each.value.description
+  /*
   ipv4_address   = cidrhost(each.value.subnet_ipv4, 2)
   ipv4_netmask   = cidrnetmask(each.value.subnet_ipv4)
   ipv6_enable    = true
@@ -76,6 +81,7 @@ resource "iosxr_interface" "links_side_b" {
       prefix_length = 64
     }
   ]
+  */
 }
 
 resource "iosxr_interface" "links_side_b_no_ip" {
@@ -101,6 +107,7 @@ resource "iosxr_interface" "links_side_b_sub" {
   mtu                         = each.value.mtu_b
   bandwidth                   = each.value.bandwidth
   description                 = each.value.description
+  /*
   ipv4_address                = cidrhost(each.value.subnet_ipv4, 2)
   ipv4_netmask                = cidrnetmask(each.value.subnet_ipv4)
   ipv6_enable                 = true
@@ -110,4 +117,5 @@ resource "iosxr_interface" "links_side_b_sub" {
       prefix_length = 64
     }
   ]
+  */
 }

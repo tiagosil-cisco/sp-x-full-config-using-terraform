@@ -1,17 +1,20 @@
 resource "iosxr_router_isis_interface_address_family" "ipv4_unicast_side_a" {
-  depends_on = [iosxr_router_isis_interface.interfaces_side_a]
-  for_each   = local.routing_protocols.isis["enable_isis"] ? { for k, v in local.p2p_links : k => v if(v.subnet_ipv4 != 0 || v.subnet_ipv6 != 0) && v.router_a_interface_encap == 0 } : {}
+  depends_on  = [iosxr_router_isis_interface.interfaces_side_a]
+  delete_mode = "attributes"
+  for_each    = local.routing_protocols.isis["enable_isis"] ? { for k, v in local.p2p_links : k => v if(v.subnet_ipv4 != 0 || v.subnet_ipv6 != 0) && v.router_a_interface_encap == 0 } : {}
 
-  device         = each.value.router_a
-  process_id     = each.value.isis_process
-  interface_name = each.value.router_a_interface
-  af_name        = "ipv4"
-  saf_name       = "unicast"
+  device                         = each.value.router_a
+  process_id                     = each.value.isis_process
+  interface_name                 = each.value.router_a_interface
+  af_name                        = "ipv4"
+  saf_name                       = "unicast"
+  fast_reroute_per_prefix        = true
+  fast_reroute_per_prefix_ti_lfa = true
 
   metric_levels = [
     {
       level_id = local.routing_protocols.isis.processes[local.isis_process_id].address_families.ipv4_unicast.level_id
-      metric   = each.value.isis_ipv4_metric
+      metric   = each.value.igp_metric_ipv4
     }
   ]
   fast_reroute_per_prefix_levels = [
@@ -23,19 +26,22 @@ resource "iosxr_router_isis_interface_address_family" "ipv4_unicast_side_a" {
 }
 
 resource "iosxr_router_isis_interface_address_family" "ipv4_unicast_side_a_sub_interface" {
-  depends_on = [iosxr_router_isis_interface.interfaces_side_a]
-  for_each   = local.routing_protocols.isis["enable_isis"] ? { for k, v in local.p2p_links : k => v if(v.subnet_ipv4 != 0 || v.subnet_ipv6 != 0) && v.router_a_interface_encap != 0 } : {}
+  depends_on  = [iosxr_router_isis_interface.interfaces_side_a]
+  delete_mode = "attributes"
+  for_each    = local.routing_protocols.isis["enable_isis"] ? { for k, v in local.p2p_links : k => v if(v.subnet_ipv4 != 0 || v.subnet_ipv6 != 0) && v.router_a_interface_encap != 0 } : {}
 
-  device         = each.value.router_a
-  process_id     = each.value.isis_process
-  interface_name = "${each.value.router_a_interface}.${each.value.router_a_interface_encap}"
-  af_name        = "ipv4"
-  saf_name       = "unicast"
+  device                         = each.value.router_a
+  process_id                     = each.value.isis_process
+  interface_name                 = "${each.value.router_a_interface}.${each.value.router_a_interface_encap}"
+  af_name                        = "ipv4"
+  saf_name                       = "unicast"
+  fast_reroute_per_prefix        = true
+  fast_reroute_per_prefix_ti_lfa = true
 
   metric_levels = [
     {
       level_id = local.routing_protocols.isis.processes[local.isis_process_id].address_families.ipv4_unicast.level_id
-      metric   = each.value.isis_ipv4_metric
+      metric   = each.value.igp_metric_ipv4
     }
   ]
   fast_reroute_per_prefix_levels = [
@@ -47,19 +53,22 @@ resource "iosxr_router_isis_interface_address_family" "ipv4_unicast_side_a_sub_i
 }
 
 resource "iosxr_router_isis_interface_address_family" "ipv4_unicast_side_b" {
-  depends_on = [iosxr_router_isis_interface.interfaces_side_a]
-  for_each   = local.routing_protocols.isis["enable_isis"] ? { for k, v in local.p2p_links : k => v if(v.subnet_ipv4 != 0 || v.subnet_ipv6 != 0) && v.router_b_interface_encap == 0 } : {}
+  depends_on  = [iosxr_router_isis_interface.interfaces_side_a]
+  delete_mode = "attributes"
+  for_each    = local.routing_protocols.isis["enable_isis"] ? { for k, v in local.p2p_links : k => v if(v.subnet_ipv4 != 0 || v.subnet_ipv6 != 0) && v.router_b_interface_encap == 0 } : {}
 
-  device         = each.value.router_b
-  process_id     = each.value.isis_process
-  interface_name = each.value.router_b_interface
-  af_name        = "ipv4"
-  saf_name       = "unicast"
+  device                         = each.value.router_b
+  process_id                     = each.value.isis_process
+  interface_name                 = each.value.router_b_interface
+  af_name                        = "ipv4"
+  saf_name                       = "unicast"
+  fast_reroute_per_prefix        = true
+  fast_reroute_per_prefix_ti_lfa = true
 
   metric_levels = [
     {
       level_id = local.routing_protocols.isis.processes[local.isis_process_id].address_families.ipv4_unicast.level_id
-      metric   = each.value.isis_ipv4_metric
+      metric   = each.value.igp_metric_ipv4
     }
   ]
   fast_reroute_per_prefix_levels = [
@@ -71,19 +80,22 @@ resource "iosxr_router_isis_interface_address_family" "ipv4_unicast_side_b" {
 }
 
 resource "iosxr_router_isis_interface_address_family" "ipv4_unicast_side_b_sub_interface" {
-  depends_on = [iosxr_router_isis_interface.interfaces_side_b]
-  for_each   = local.routing_protocols.isis["enable_isis"] ? { for k, v in local.p2p_links : k => v if(v.subnet_ipv4 != 0 || v.subnet_ipv6 != 0) && v.router_b_interface_encap != 0 } : {}
+  depends_on  = [iosxr_router_isis_interface.interfaces_side_b]
+  delete_mode = "attributes"
+  for_each    = local.routing_protocols.isis["enable_isis"] ? { for k, v in local.p2p_links : k => v if(v.subnet_ipv4 != 0 || v.subnet_ipv6 != 0) && v.router_b_interface_encap != 0 } : {}
 
-  device         = each.value.router_b
-  process_id     = each.value.isis_process
-  interface_name = "${each.value.router_b_interface}.${each.value.router_b_interface_encap}"
-  af_name        = "ipv4"
-  saf_name       = "unicast"
+  device                         = each.value.router_b
+  process_id                     = each.value.isis_process
+  interface_name                 = "${each.value.router_b_interface}.${each.value.router_b_interface_encap}"
+  af_name                        = "ipv4"
+  saf_name                       = "unicast"
+  fast_reroute_per_prefix        = true
+  fast_reroute_per_prefix_ti_lfa = true
 
   metric_levels = [
     {
       level_id = local.routing_protocols.isis.processes[local.isis_process_id].address_families.ipv4_unicast.level_id
-      metric   = each.value.isis_ipv4_metric
+      metric   = each.value.igp_metric_ipv4
     }
   ]
   fast_reroute_per_prefix_levels = [
@@ -95,7 +107,8 @@ resource "iosxr_router_isis_interface_address_family" "ipv4_unicast_side_b_sub_i
 }
 
 resource "iosxr_router_isis_interface_address_family" "ipv4_unicast_loopback" {
-  depends_on = [iosxr_router_isis_interface.interfaces_side_a]
+  depends_on  = [iosxr_router_isis_interface.interfaces_side_a]
+  delete_mode = "attributes"
   for_each = local.routing_protocols.isis["enable_isis"] ? {
   for k, v in local.loopback_ips : k => v if v.isis_enabled } : {}
 
@@ -105,29 +118,26 @@ resource "iosxr_router_isis_interface_address_family" "ipv4_unicast_loopback" {
   af_name        = "ipv4"
   saf_name       = "unicast"
 
-  metric_levels = [
-    {
-      level_id = local.routing_protocols.isis.processes[local.isis_process_id].address_families.ipv4_unicast.level_id
-      metric   = each.value.isis_ipv4_metric
-    }
-  ]
 
 }
 
 resource "iosxr_router_isis_interface_address_family" "ipv6_unicast_side_a" {
-  depends_on = [iosxr_router_isis_interface.interfaces_side_a]
-  for_each   = local.routing_protocols.isis["enable_isis"] ? { for k, v in local.p2p_links : k => v if(v.subnet_ipv4 != 0 || v.subnet_ipv6 != 0) && v.router_a_interface_encap == 0 } : {}
+  depends_on  = [iosxr_router_isis_interface.interfaces_side_a]
+  delete_mode = "attributes"
+  for_each    = local.routing_protocols.isis["enable_isis"] ? { for k, v in local.p2p_links : k => v if(v.subnet_ipv4 != 0 || v.subnet_ipv6 != 0) && v.router_a_interface_encap == 0 } : {}
 
-  device         = each.value.router_a
-  process_id     = each.value.isis_process
-  interface_name = each.value.router_a_interface
-  af_name        = "ipv6"
-  saf_name       = "unicast"
+  device                         = each.value.router_a
+  process_id                     = each.value.isis_process
+  interface_name                 = each.value.router_a_interface
+  af_name                        = "ipv6"
+  saf_name                       = "unicast"
+  fast_reroute_per_prefix        = true
+  fast_reroute_per_prefix_ti_lfa = true
 
   metric_levels = [
     {
       level_id = local.routing_protocols.isis.processes[local.isis_process_id].address_families.ipv6_unicast.level_id
-      metric   = each.value.isis_ipv6_metric
+      metric   = each.value.igp_metric_ipv6
     }
   ]
   fast_reroute_per_prefix_levels = [
@@ -139,19 +149,22 @@ resource "iosxr_router_isis_interface_address_family" "ipv6_unicast_side_a" {
 }
 
 resource "iosxr_router_isis_interface_address_family" "ipv6_unicast_side_a_sub_interface" {
-  depends_on = [iosxr_router_isis_interface.interfaces_side_a]
-  for_each   = local.routing_protocols.isis["enable_isis"] ? { for k, v in local.p2p_links : k => v if(v.subnet_ipv4 != 0 || v.subnet_ipv6 != 0) && v.router_a_interface_encap != 0 } : {}
+  depends_on  = [iosxr_router_isis_interface.interfaces_side_a]
+  delete_mode = "attributes"
+  for_each    = local.routing_protocols.isis["enable_isis"] ? { for k, v in local.p2p_links : k => v if(v.subnet_ipv4 != 0 || v.subnet_ipv6 != 0) && v.router_a_interface_encap != 0 } : {}
 
-  device         = each.value.router_a
-  process_id     = each.value.isis_process
-  interface_name = "${each.value.router_a_interface}.${each.value.router_a_interface_encap}"
-  af_name        = "ipv6"
-  saf_name       = "unicast"
+  device                         = each.value.router_a
+  process_id                     = each.value.isis_process
+  interface_name                 = "${each.value.router_a_interface}.${each.value.router_a_interface_encap}"
+  af_name                        = "ipv6"
+  saf_name                       = "unicast"
+  fast_reroute_per_prefix        = true
+  fast_reroute_per_prefix_ti_lfa = true
 
   metric_levels = [
     {
       level_id = local.routing_protocols.isis.processes[local.isis_process_id].address_families.ipv6_unicast.level_id
-      metric   = each.value.isis_ipv6_metric
+      metric   = each.value.igp_metric_ipv6
     }
   ]
   fast_reroute_per_prefix_levels = [
@@ -163,19 +176,22 @@ resource "iosxr_router_isis_interface_address_family" "ipv6_unicast_side_a_sub_i
 }
 
 resource "iosxr_router_isis_interface_address_family" "ipv6_unicast_side_b" {
-  depends_on = [iosxr_router_isis_interface.interfaces_side_a]
-  for_each   = local.routing_protocols.isis["enable_isis"] ? { for k, v in local.p2p_links : k => v if(v.subnet_ipv6 != 0 || v.subnet_ipv6 != 0) && v.router_b_interface_encap == 0 } : {}
+  depends_on  = [iosxr_router_isis_interface.interfaces_side_a]
+  delete_mode = "attributes"
+  for_each    = local.routing_protocols.isis["enable_isis"] ? { for k, v in local.p2p_links : k => v if(v.subnet_ipv6 != 0 || v.subnet_ipv6 != 0) && v.router_b_interface_encap == 0 } : {}
 
-  device         = each.value.router_b
-  process_id     = each.value.isis_process
-  interface_name = each.value.router_b_interface
-  af_name        = "ipv6"
-  saf_name       = "unicast"
+  device                         = each.value.router_b
+  process_id                     = each.value.isis_process
+  interface_name                 = each.value.router_b_interface
+  af_name                        = "ipv6"
+  saf_name                       = "unicast"
+  fast_reroute_per_prefix        = true
+  fast_reroute_per_prefix_ti_lfa = true
 
   metric_levels = [
     {
       level_id = local.routing_protocols.isis.processes[local.isis_process_id].address_families.ipv6_unicast.level_id
-      metric   = each.value.isis_ipv6_metric
+      metric   = each.value.igp_metric_ipv6
     }
   ]
   fast_reroute_per_prefix_levels = [
@@ -187,19 +203,22 @@ resource "iosxr_router_isis_interface_address_family" "ipv6_unicast_side_b" {
 }
 
 resource "iosxr_router_isis_interface_address_family" "ipv6_unicast_side_b_sub_interface" {
-  depends_on = [iosxr_router_isis_interface.interfaces_side_b]
-  for_each   = local.routing_protocols.isis["enable_isis"] ? { for k, v in local.p2p_links : k => v if(v.subnet_ipv4 != 0 || v.subnet_ipv6 != 0) && v.router_b_interface_encap != 0 } : {}
+  depends_on  = [iosxr_router_isis_interface.interfaces_side_b]
+  delete_mode = "attributes"
+  for_each    = local.routing_protocols.isis["enable_isis"] ? { for k, v in local.p2p_links : k => v if(v.subnet_ipv4 != 0 || v.subnet_ipv6 != 0) && v.router_b_interface_encap != 0 } : {}
 
-  device         = each.value.router_b
-  process_id     = each.value.isis_process
-  interface_name = "${each.value.router_b_interface}.${each.value.router_b_interface_encap}"
-  af_name        = "ipv6"
-  saf_name       = "unicast"
+  device                         = each.value.router_b
+  process_id                     = each.value.isis_process
+  interface_name                 = "${each.value.router_b_interface}.${each.value.router_b_interface_encap}"
+  af_name                        = "ipv6"
+  saf_name                       = "unicast"
+  fast_reroute_per_prefix        = true
+  fast_reroute_per_prefix_ti_lfa = true
 
   metric_levels = [
     {
       level_id = local.routing_protocols.isis.processes[local.isis_process_id].address_families.ipv6_unicast.level_id
-      metric   = each.value.isis_ipv6_metric
+      metric   = each.value.igp_metric_ipv6
     }
   ]
   fast_reroute_per_prefix_levels = [
@@ -211,7 +230,8 @@ resource "iosxr_router_isis_interface_address_family" "ipv6_unicast_side_b_sub_i
 }
 
 resource "iosxr_router_isis_interface_address_family" "ipv6_unicast_loopback" {
-  depends_on = [iosxr_router_isis_interface.interfaces_side_a]
+  depends_on  = [iosxr_router_isis_interface.interfaces_side_a]
+  delete_mode = "attributes"
   for_each = local.routing_protocols.isis["enable_isis"] ? {
   for k, v in local.loopback_ips : k => v if v.isis_enabled } : {}
 
@@ -221,12 +241,6 @@ resource "iosxr_router_isis_interface_address_family" "ipv6_unicast_loopback" {
   af_name        = "ipv6"
   saf_name       = "unicast"
 
-  metric_levels = [
-    {
-      level_id = local.routing_protocols.isis.processes[local.isis_process_id].address_families.ipv6_unicast.level_id
-      metric   = each.value.isis_ipv6_metric
-    }
-  ]
 
 }
 /*

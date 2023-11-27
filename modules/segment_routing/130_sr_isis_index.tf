@@ -1,5 +1,5 @@
 resource "iosxr_router_isis_interface_address_family" "ipv4_sr_index" {
-  depends_on = [ iosxr_router_isis_address_family.ipv4_unicast ]
+  depends_on = [iosxr_router_isis_address_family.ipv4_unicast]
   for_each = local.routing_protocols.isis["enable_isis"] ? {
   for k, v in local.loopback_ips : k => v if v.isis_enabled && v.sr_enabled } : {}
   delete_mode = "attributes"
@@ -15,7 +15,7 @@ resource "iosxr_router_isis_interface_address_family" "ipv4_sr_index" {
 
 
 resource "iosxr_router_isis_interface_address_family" "ipv6_sr_index" {
-  depends_on = [ iosxr_router_isis_address_family.ipv6_unicast ]
+  depends_on = [iosxr_router_isis_address_family.ipv6_unicast]
   for_each = local.routing_protocols.isis["enable_isis"] ? {
   for k, v in local.loopback_ips : k => v if v.isis_enabled && v.sr_enabled } : {}
   delete_mode = "attributes"

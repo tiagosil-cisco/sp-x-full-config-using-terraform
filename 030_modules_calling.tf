@@ -16,6 +16,6 @@ module "isis" {
 }
 
 module "segment_routing" {
-  depends_on = [ module.isis, module.ospf ]
-  source = "./modules/segment_routing"
+  depends_on = [module.isis, module.ospf]
+  source     = "./modules/segment_routing"
 }
